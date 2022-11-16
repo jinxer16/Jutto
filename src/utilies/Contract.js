@@ -261,7 +261,7 @@ export const juttoTokenAbi = [{
   "type": "function"
 }];
 export const financeAppContractAddress =
-  "0x1810db95793AC5616c9944F0A1A6f4A3bc60d68f";
+  "0x82e97377E98534d0fB2496851A1E9E5194F166Ff";
 export const financeAppContract_Abi = [
 	{
 		"inputs": [],
@@ -526,6 +526,30 @@ export const financeAppContract_Abi = [
 		],
 		"name": "Withdraw",
 		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_user",
+				"type": "address"
+			}
+		],
+		"name": "_calCurAllCTO",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
 	},
 	{
 		"inputs": [
