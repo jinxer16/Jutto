@@ -9,6 +9,9 @@
 .inner_footer {
     padding: 120px 0px !important;
 }
+#img-ip-1{
+    width: 215px !important;
+}
 
 .social {
     display: flex !important;
@@ -18,7 +21,7 @@
 }
 
 .www {
-    width: 120px !important;
+    width: 200px !important;
 }
 
 

@@ -16,6 +16,7 @@ function Withdraw_m(props) {
     let {withdrawDetail} = useSelector((state)=>state.withDrawInfo);
   const dispatch = useDispatch()
     const [loader, setLoader] = useState(false);
+    console.log("withdrawDetail",withdrawDetail);
     const getDetail = async () => {
         try {
          if (acc == "No Wallet") {

@@ -1,7 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import LOGO1 from "../Assets/LOGO2.png"
-
+import LOGO2 from "../Assets/teligram.jpg"
+import { SendOutlined } from '@ant-design/icons';
 import { BsTwitter } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { FaTwitch } from "react-icons/fa";
@@ -17,7 +18,9 @@ function Footer() {
           <div className="footer_img">
             <a href="#" className="footer_img_ml">
               <img src={LOGO1} className='www' alt="" />
+
             </a>
+            
           </div>
           <div className="social">
             {/* <a href="" className="footer_icons ml">
@@ -28,9 +31,8 @@ function Footer() {
               {" "}
               <FaDiscord></FaDiscord>{" "}
             </a> */}
-            <a href="" className="footer_icons ml">
-              {" "}
-              <FaTwitch></FaTwitch>{" "}
+           <a href="https://t.me/juttosmartgame" className="footer_img_ml" >
+            <img src={LOGO2} className='www' id="img-ip-1" alt="" />
             </a>
             {/* <a href="" className="footer_icons ml">
               {" "}

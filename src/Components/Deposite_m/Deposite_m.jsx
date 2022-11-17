@@ -57,7 +57,7 @@ function Deposite_m(props) {
                         toast.info("Select Token First")
                     }else{
                         let value;
-                        if(isToken == "juttu"){
+                        if(isToken == "jutto"){
                             let tokenPer = await contract.methods.tokenper().call();
                             value = tokenPer * depositandintrest;
                              value = web3.utils.toWei((value).toString());
@@ -170,7 +170,7 @@ function Deposite_m(props) {
                             { isOption && <div className='col-lg-4'>
                                 <select name="" id="" onChange={(e)=>{setIsToken(e.target.value)}}>
                                     <option value="" selected disabled>Select Token</option>
-                                    <option value="juttu">JUTTU</option>
+                                    <option value="juttu">JUTTO</option>
                                     <option value="busd">BUSD</option>
                                 </select>
                             </div>}

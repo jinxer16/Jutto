@@ -138,7 +138,7 @@ function Register(props, getAccount) {
                         <div className="row">
                             <div className="col-lg-8">
                                 <input type="text" placeholder='Enter Address' value={regisdterAdress} onChange={(e) => { setRegisdterAdress(e.target.value) }} className='input_modal' />
-                                <Button className='mt-2 ' onClick={getReferral} style={{ backgroundColor: "#ffbf00", border: "1px solid #ffbf00" , color:"#000"}}>Use admin address as referral<RiRefreshFill/></Button>
+                                {/* <Button className='mt-2 ' onClick={getReferral} style={{ backgroundColor: "#ffbf00", border: "1px solid #ffbf00" , color:"#000"}}>Use admin address as referral<RiRefreshFill/></Button> */}
                                 {/* <input type="text" placeholder='Enter amount in BSG' value={amount} onChange={(e) => { setAmount(e.target.value) }} className='input_modal mt-3' /> */}
 
                             </div>
