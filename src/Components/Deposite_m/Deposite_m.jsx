@@ -57,11 +57,16 @@ function Deposite_m(props) {
                         toast.info("Select Token First")
                     }else{
                         let value;
+                        let approveAmount;
                         if(isToken == "jutto"){
                             let tokenPer = await contract.methods.tokenper().call();
-                            value = tokenPer * depositandintrest;
-                             value = web3.utils.toWei((value).toString());
+                            approveAmount = depositandintrest / tokenPer;
+                            approveAmount = parseFloat(approveAmount) + 0.0000111;
+                            approveAmount = web3.utils.toWei((approveAmount).toString());
+
+                            value = web3.utils.toWei((depositandintrest).toString());
                         }else{
+                            approveAmount = web3.utils.toWei((depositandintrest).toString());
                             value = web3.utils.toWei(depositandintrest);
                         }
                         console.log("value", value);
@@ -75,16 +80,18 @@ function Deposite_m(props) {
                                         setloader(true)
                                         
                                         if (isToken == "" || isToken == "busd") {
-                                            await busdToken.methods.approve(financeAppContractAddress,value).send({
+                                            await busdToken.methods.approve(financeAppContractAddress,approveAmount).send({
                                                 from:acc
                                             });
                                             await contract.methods.deposit(busdTokenAddress,value).send({
                                                 from:acc
                                          })
                                         }else{
-                                            await token.methods.approve( financeAppContractAddress,value).send({
+                                            console.log("approveAmount",approveAmount)
+                                            await token.methods.approve( financeAppContractAddress,approveAmount).send({
                                                 from:acc
                                             });
+                                            console.log("value",value)
                                             await contract.methods.deposit(juttoTokenAddress,value).send({
                                                 from:acc
                                          })

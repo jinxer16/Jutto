@@ -937,8 +937,10 @@ export const juttoTokenAbi = [
 		"type": "function"
 	}
 ];
+
 export const financeAppContractAddress =
-  "0xe9BCF0167AaC72B819B8E6EfA9b4e87e6cB94fB6";
+  "0x49354e86f2c17E3f475cfF466f2113ad26F21470";
+
 export const financeAppContract_Abi = [
 	{
 		"inputs": [],
@@ -1191,6 +1193,25 @@ export const financeAppContract_Abi = [
 				"name": "",
 				"type": "uint256"
 			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "pacakage",
+				"type": "uint256"
+			}
+		],
+		"name": "_calculateDepositReward",
+		"outputs": [
 			{
 				"internalType": "uint256",
 				"name": "",
@@ -2046,7 +2067,9 @@ export const financeAppContract_Abi = [
 		"type": "function"
 	}
 ];
+
 export const busdTokenAddress = "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56";
+
 export const busdtokenAbi = [
 	{
 		"inputs": [],
