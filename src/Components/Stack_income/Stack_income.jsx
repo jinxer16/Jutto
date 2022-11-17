@@ -127,8 +127,8 @@ function Stack_income() {
                   <MdLocationOn className='icon_color fs-3'></MdLocationOn>
                 </div>
                 <div>
-                  <p className='stack_p width_adjust'>Contract address: <a href={`https://polygonscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank">{financeAppContractAddress} </a></p>
-                  <p className='stack_p width_adjust2'>Contract address: <a href={`https://polygonscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
+                  <p className='stack_p width_adjust'>Contract address: <a href={`https://bscscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank">{financeAppContractAddress} </a></p>
+                  <p className='stack_p width_adjust2'>Contract address: <a href={`https://bscscan.com/address/${financeAppContractAddress}`} className="stack_p" target="_blank" >{(financeAppContractAddress?.substring(0, 4) + "..." + financeAppContractAddress?.substring(financeAppContractAddress?.length - 4))}</a></p>
                   {/* <p className=' aliment width_adjust2'>{refrealAdress?.substring(0,8) + "..." + refrealAdress?.substring(refrealAdress?.length -8)}</p> */}
                 </div>
               </div>

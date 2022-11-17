@@ -50,7 +50,7 @@ function Withdraw_m(props) {
 
                     const web3 = window.web3;
                     let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
-                    await financeAppcontractOf.methods.withdraw().send({
+                    await financeAppcontractOf.methods.Withdrawal().send({
                         from: acc 
                     });
                     getDetail()

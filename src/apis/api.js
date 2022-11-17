@@ -3,17 +3,17 @@ let isItConnected = false;
 // const chainId = 137 // Polygon Mainnet
 const networks = {
   bsc: {
-    chainId: `0x${Number(80001).toString(16)}`,
-    chainName: "BNB Smart Chain Testnet",
+    chainId: `0x${Number(56).toString(16)}`,
+    chainName: "BNB Smart Chain Mainnet",
     nativeCurrency: {
-      name: "Mumbai",
-      symbol: "MATIC",
+      name: "Binance",
+      symbol: "BNB",
       decimals: 18,
     },
     rpcUrls: [
-      "https://matic-mumbai.chainstacklabs.com"
+      "https://bsc-dataseed1.binance.org/"
     ],
-    blockExplorerUrls: ["https://polygonscan.com/"],
+    blockExplorerUrls: ["https://bscscan.com/"],
   },
 };
 const changeNetwork = async ({ networkName }) => {
@@ -60,7 +60,7 @@ export const loadWeb3 = async () => {
       await window.web3.eth.getChainId((err, netId) => {
         // console.log("networkId==>", netId);
         switch (netId.toString()) {
-          case "80001":
+          case "56":
             isItConnected = true;
             break;
           // case "137":
