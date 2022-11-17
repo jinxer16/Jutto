@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.css";
 import LOGO1 from "../Assets/LOGO2.png"
 import LOGO2 from "../Assets/teligram.jpg"
-import { SendOutlined } from '@ant-design/icons';
+// import { SendOutlined } from '@ant-design/icons';
 import { BsTwitter } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import { FaTwitch } from "react-icons/fa";

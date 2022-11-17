@@ -170,7 +170,7 @@ function Deposite_m(props) {
                             { isOption && <div className='col-lg-4'>
                                 <select name="" id="" onChange={(e)=>{setIsToken(e.target.value)}}>
                                     <option value="" selected disabled>Select Token</option>
-                                    <option value="juttu">JUTTO</option>
+                                    <option value="jutto">JUTTO</option>
                                     <option value="busd">BUSD</option>
                                 </select>
                             </div>}
