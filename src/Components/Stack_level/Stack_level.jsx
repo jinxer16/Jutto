@@ -4,7 +4,7 @@ import { AiOutlineStar } from "react-icons/ai"
 import { AiFillStar } from "react-icons/ai"
 
 import { AiOutlineQuestionCircle } from "react-icons/ai"
-import { financeAppContractAddress, financeAppContract_Abi, juttoTokenAddress, juttoTokenAbi } from '../../utilies/Contract';
+import { financeAppContractAddress, financeAppContract_Abi, busdTokenAddress, busdtokenAbi } from '../../utilies/Contract';
 import { loadWeb3 } from '../../apis/api';
 import Web3 from 'web3'
 import { toast } from 'react-toastify';
@@ -35,7 +35,7 @@ function Stack_level() {
 				  }else{
                 const web3 = window.web3;
                 let financeAppcontractOf = new web3.eth.Contract(financeAppContract_Abi, financeAppContractAddress);
-                let financeAppTokenOf = new web3.eth.Contract(juttoTokenAbi, juttoTokenAddress);
+                let financeAppTokenOf = new web3.eth.Contract(busdtokenAbi, busdTokenAddress);
 
                 let balanceOf = await financeAppTokenOf.methods.balanceOf(acc).call();
                 let usdtamount = Number(web3.utils.fromWei(balanceOf)).toFixed(2)

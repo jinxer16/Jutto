@@ -71,7 +71,7 @@ function Deposite_m(props) {
                         }
                         console.log("value", value);
                         let userTokenBalance = await checkBalance();
-                        if( parseFloat(userTokenBalance) >= parseFloat(web3.utils.fromWei(value))){
+                        // if( parseFloat(userTokenBalance) >= parseFloat(web3.utils.fromWei(value))){
                             if(parseFloat(value) >= parseFloat(web3.utils.fromWei(maxDeposit))){
                                 if (parseInt(value) % 50 === 0) {
                                     if (referrer == '0x0000000000000000000000000000000000000000') {
@@ -112,9 +112,9 @@ function Deposite_m(props) {
                             }else{
                                 toast.info(`please enter value ${web3.utils.fromWei(maxDeposit)} or above`)
                             }
-                        }else{
-                            toast.info("Insuffiecent Token")
-                        }
+                        // }else{
+                        //     toast.info("Insuffiecent Token")
+                        // }
                     }
                 }else{
                     toast.info('value must be greater then 50 and less then 2000 ')
